@@ -15,6 +15,7 @@ export const getRandomColorPairs = (count) => {
   // using lib: https://github.com/davidmerfield/randomColor
   const colorList = []
   const hueList = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'monochrome']
+  // const hueList = ['purple', 'purple', 'purple', 'purple', 'purple', 'purple', 'purple', 'purple']
 
   // random "count" colors
   for (let i = 0; i < count; i++) {
