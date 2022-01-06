@@ -63,7 +63,7 @@ function handleColorClick(liElement) {
     const isWin = getInActiveColorList().length === 0
     if (isWin) {
       showPlayAgainButton()
-      setTimerText('YOU WIN 🎉')
+      setTimerText('You WIN 😍')
       timer.clear()
 
       gameStatus = GAME_STATUS.FINISHED
