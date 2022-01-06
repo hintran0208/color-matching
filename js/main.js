@@ -5,6 +5,7 @@ import {
   setTimerText,
   showPlayAgainButton,
   createTimer,
+  setBackgroundColor,
 } from './utils.js'
 import {
   getColorElementList,
@@ -30,6 +31,7 @@ function handleTimerChange(second) {
 function handleTimerFinish() {
   gameStatus = GAME_STATUS.FINISHED
   setTimerText('Game Over 😭')
+  showPlayAgainButton()
 }
 
 // TODOs
@@ -57,6 +59,7 @@ function handleColorClick(liElement) {
 
   if (isMatch) {
     // check win
+    setBackgroundColor(firstColor)
     const isWin = getInActiveColorList().length === 0
     if (isWin) {
       showPlayAgainButton()
@@ -133,6 +136,9 @@ function resetGame() {
 
   // re-generate new colors
   initColors()
+
+  // reset background color
+  setBackgroundColor('goldenrod')
 
   // start new game
   startTimer()
