@@ -16,14 +16,14 @@ export const getRandomColorPairs = (count) => {
   // receive count --> return count * 2 random colors
   // using lib: https://github.com/davidmerfield/randomColor
   const colorList = []
-  const hueList = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'monochrome']
-  // const hueList = ['purple', 'purple', 'purple', 'purple', 'purple', 'purple', 'purple', 'purple']
+  // const hueList = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'monochrome']
+  const hueList = ['purple', 'purple', 'purple', 'purple', 'purple', 'purple', 'purple', 'purple']
 
   // random "count" colors
   for (let i = 0; i < count; i++) {
     // randomColor function is provided by https://github.com/davidmerfield/randomColor
     const color = window.randomColor({
-      luminosity: 'dark',
+      luminosity: 'light',
       hue: hueList[i % hueList.length],
     })
 
