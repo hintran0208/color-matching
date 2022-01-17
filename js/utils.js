@@ -24,7 +24,7 @@ export const getRandomColorPairs = (count) => {
   for (let i = 0; i < count; i++) {
     // randomColor function is provided by https://github.com/davidmerfield/randomColor
     const color = window.randomColor({
-      luminosity: 'dark',
+      luminosity: 'light',
       hue: hueList[i % hueList.length],
     })
 
