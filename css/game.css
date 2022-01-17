@@ -6,7 +6,7 @@
 
   padding: 1rem;
   min-height: 100vh;
-  background-color: goldenrod;
+  /* background-image: url('../images/background.jpg'); */
   transition: all 0.25s;
 }
 
@@ -30,7 +30,7 @@
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  color: mediumslateblue;
+  color: rgb(196, 0, 0);
 }
 
 .game__timer {
@@ -48,11 +48,11 @@
   display: none;
   padding: 0.5rem 2.5rem;
   margin: 0 auto;
-  border: 1px solid goldenrod;
+  border: 1px solid rgb(218, 32, 32);
   border-radius: 0.25rem;
 
   color: white;
-  background-color: goldenrod;
+  background-color: rgb(218, 32, 32);
 
   outline: none;
   transition: all 0.25s;
@@ -121,4 +121,8 @@ footer {
   margin-top: 1rem;
   color: rgba(255, 255, 255, 0.75);
   font-size: 14px;
+}
+
+.link {
+  color: rgb(83, 6, 6);
 }

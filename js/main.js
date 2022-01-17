@@ -8,6 +8,7 @@ import {
   setBackgroundColor,
 } from './utils.js'
 import {
+  getColorBackground,
   getColorElementList,
   getUlElement,
   getInActiveColorList,
@@ -138,7 +139,10 @@ function resetGame() {
   initColors()
 
   // reset background color
-  setBackgroundColor('goldenrod')
+  const backgroundColorElement = getColorBackground()
+  if (backgroundColorElement) {
+    backgroundColorElement.style.backgroundImage = "url('../images/background.jpg')"
+  }
 
   // start new game
   startTimer()
@@ -157,6 +161,11 @@ function startTimer() {
 
 // main
 ;(() => {
+  const backgroundColorElement = getColorBackground()
+  if (backgroundColorElement) {
+    backgroundColorElement.style.backgroundImage = "url('../images/background.jpg')"
+  }
+
   initColors()
 
   attachEventForColorList()

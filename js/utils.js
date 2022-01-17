@@ -17,13 +17,14 @@ export const getRandomColorPairs = (count) => {
   // using lib: https://github.com/davidmerfield/randomColor
   const colorList = []
   // const hueList = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'monochrome']
-  const hueList = ['purple', 'purple', 'purple', 'purple', 'purple', 'purple', 'purple', 'purple']
+  const hueList = ['red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
+  // const hueList = ['purple', 'purple', 'purple', 'purple', 'purple', 'purple', 'purple', 'purple']
 
   // random "count" colors
   for (let i = 0; i < count; i++) {
     // randomColor function is provided by https://github.com/davidmerfield/randomColor
     const color = window.randomColor({
-      luminosity: 'light',
+      luminosity: 'dark',
       hue: hueList[i % hueList.length],
     })
 
@@ -56,7 +57,10 @@ export function setTimerText(text) {
 
 export function setBackgroundColor(color) {
   const backgroundColorElement = getColorBackground()
-  if (backgroundColorElement) backgroundColorElement.style.backgroundColor = color
+  if (backgroundColorElement) {
+    backgroundColorElement.style.removeProperty('background-image')
+    backgroundColorElement.style.backgroundColor = color
+  }
 }
 
 export function createTimer({ seconds, onChange, onFinish }) {
